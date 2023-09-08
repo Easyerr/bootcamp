@@ -1,7 +1,7 @@
 function saludar(repeticiones) {
     let mensaje = ""; 
     for (let i = 0; i < repeticiones; i++) {
-      mensaje += "Hola\n"; 
+      mensaje += "Hola! "; 
     }
     alert(mensaje);
   }
