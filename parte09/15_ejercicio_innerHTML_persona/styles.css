@@ -1,0 +1,25 @@
+#datos {
+    display: flex;
+    justify-content: center;
+}
+.age {
+    display: flex;
+    justify-content: center;
+}
+.email {
+    display: flex;
+    justify-content: center;
+}
+.address {
+    display: flex;
+    justify-content: center;
+}
+#img {
+    
+    display: flex;
+    justify-content: center;
+}
+#foto {
+    width: 400px;
+    height: 400px;
+}
