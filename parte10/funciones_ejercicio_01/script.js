@@ -7,6 +7,6 @@ function saludar(repeticiones) {
   }
   
   saludar(5); 
-  saludar(2); 
-  console.log(mensaje);
+  saludar(20); 
+  
   
