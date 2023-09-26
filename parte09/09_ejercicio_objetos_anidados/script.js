@@ -138,6 +138,6 @@ let randomObject ={
 console.log(randomObject.them.speed.past.program.grade.addition.whose.national.cannot.board);
 
 
-randomObject.name = prompt("Tu nombre aqui:");
-  console.log(randomObject.name);
+randomObject.them.speed.past.program.grade.addition.whose.national.cannot.name = prompt("Introduce tu nombre:");
+  console.log(randomObject.them.speed.past.program.grade.addition.whose.national.cannot.name);
   
