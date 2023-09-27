@@ -6,19 +6,17 @@ Después vuelve a pedir los números y hacer todo otra vez hasta que el usuario 
 function operacionUno (numeroUno, numeroDos){
 return numeroUno/numeroDos
 }
-while (true){
+do {
+  numeroUno = parseInt(prompt("Ingresa un número:"));
+  numeroDos = parseInt(prompt("Ingresa otro número"));
 
-    numeroUno = parseInt(prompt("Ingresa un número:"));
-    numeroDos = parseInt(prompt("Ingresa otro número"));
-
-  if (numeroDos === 0){
-
-    alert ("Dividir por 0 es como no dividir")
-    break;//esto no esta en los PDFs pero es la hostia juasjuas
-}
-let resultado = operacionUno (numeroUno, numeroDos);
-alert(resultado)
-}
+  if (numeroDos === 0) {
+      alert("Dividir por 0 es como no dividir");
+  } else {
+      let resultado = operacionUno(numeroUno, numeroDos);
+      alert(resultado);
+  }
+} while (numeroDos !== 0);
 
 
 
