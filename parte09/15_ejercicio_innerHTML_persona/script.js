@@ -167,71 +167,23 @@ let personas = {
     
     Lo tenéis en un ejemplo anterior.*/
 
-    let nombrePersona = prompt("como se llama la persona?");
-    if (nombrePersona === "Bridgette McGuire") {
-        document.querySelector("#nombre").innerHTML= "Bridgette McGuire";
-        document.querySelector(".age").innerHTML= personas["Bridgette McGuire"].age;
-        document.querySelector(".email").innerHTML= personas["Bridgette McGuire"].email;
-        document.querySelector(".address").innerHTML= personas["Bridgette McGuire"].address
-        document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/thispersondoesnotexist-12.jpg";
-        document.body.style.backgroundColor = personas["Bridgette McGuire"].eyeColor
-    }
-   
-    else if (nombrePersona === "Melinda Wheele") {
-        document.querySelector("#nombre").innerHTML= "Melinda Wheele";
-        document.querySelector(".age").innerHTML= personas["Melinda Wheele"].age;
-        document.querySelector(".email").innerHTML= personas["Melinda Wheele"].email;
-        document.querySelector(".address").innerHTML= personas["Melinda Wheele"].address
-        document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/thispersondoesnotexist-11.jpg";
-        document.body.style.backgroundColor = personas["Melinda Wheele"].eyeColor
+      let nombrePersona = prompt("como se llama la persona?");
+
+    if (personas[nombrePersona]){
+        let datos = personas[nombrePersona]
+        document.querySelector("#nombre").innerHTML= datos.name;
+        document.querySelector(".age").innerHTML= datos.age;
+        document.querySelector(".email").innerHTML= datos.email;
+        document.querySelector(".address").innerHTML= datos.address;
+        document.querySelector("img").src= datos.picture;
+        document.body.style.backgroundColor = datos.eyeColor;
     }
     
-    else if (nombrePersona === "Ward Fulton" ) {
-        document.querySelector("#nombre").innerHTML= "Ward Fulton";
-        document.querySelector(".age").innerHTML= personas["Ward Fulton"].age;
-        document.querySelector(".email").innerHTML= personas["Ward Fulton"].email;
-        document.querySelector(".address").innerHTML= personas["Ward Fulton"].address
-        document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/thispersondoesnotexist-4.jpg";
-        document.body.style.backgroundColor = personas["Ward Fulton"].eyeColor
-    }
-    else if (nombrePersona === "Tessa Sellers") {
-        document.querySelector("#nombre").innerHTML= "Tessa Sellers";
-        document.querySelector(".age").innerHTML= personas["Tessa Sellers"].age;
-        document.querySelector(".email").innerHTML= personas["Tessa Sellers"].email;
-        document.querySelector(".address").innerHTML= personas["Tessa Sellers"].address
-        document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/thispersondoesnotexist-10.jpg";
-        document.body.style.backgroundColor = personas["Tessa Sellers"].eyeColor
-    }
-    else if (nombrePersona === "Kimberley Roberson") {
-        document.querySelector("#nombre").innerHTML= "Kimberley Roberson";
-        document.querySelector(".age").innerHTML= personas["Kimberley Roberson"].age;
-        document.querySelector(".email").innerHTML= personas["Kimberley Roberson"].email;
-        document.querySelector(".address").innerHTML= personas["Kimberley Roberson"].address
-        document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/thispersondoesnotexist-9.jpg";
-        document.body.style.backgroundColor = personas["Kimberley Roberson"].eyeColor
-    }
-    else if (nombrePersona === "Eleanor Stafford") {
-        document.querySelector("#nombre").innerHTML= "Eleanor Stafford";
-        document.querySelector(".age").innerHTML= personas["Eleanor Stafford"].age;
-        document.querySelector(".email").innerHTML= personas["Eleanor Stafford"].email;
-        document.querySelector(".address").innerHTML= personas["Eleanor Stafford"].address
-        document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/thispersondoesnotexist-13.jpg";
-        document.body.style.backgroundColor = personas["Eleanor Stafford"].eyeColor
-    }
-    
-    else if (nombrePersona === "Crane Harris") {
-        document.querySelector("#nombre").innerHTML= "Crane Harris";
-        document.querySelector(".age").innerHTML= personas["Crane Harris"].age;
-        document.querySelector(".email").innerHTML= personas["Crane Harris"].email;
-        document.querySelector(".address").innerHTML= personas["Crane Harris"].address
-        document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/thispersondoesnotexist-3.jpg";
-        document.body.style.backgroundColor = personas["Crane Harris"].eyeColor
-    }
     else{
-        alert("El delincuente que busca no está en la base de datos.")
-  
-        document.querySelector("#nombre").innerHTML= "¯\\_(ツ)_/¯";
-        document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/no-image-available-picture-vector-31595567.webp";
-    }
+            alert("El delincuente que busca no está en la base de datos.")
+      
+            document.querySelector("#nombre").innerHTML= "¯\\_(ツ)_/¯";
+            document.querySelector("img").src ="/Users/easyer/Desktop/bootcamp/parte09/15_ejercicio_innerHTML_persona/Fotos/no-image-available-picture-vector-31595567.webp";
+        }
 
 
